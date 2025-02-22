@@ -1,12 +1,13 @@
 import java.util.Scanner;
 import java.util.Random;
-public class Main {
+public class HighorLow {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Random rand = new Random();
         int randomNumber = 0;
         int guess = 0;
         boolean done = false;
+        String trash = "";
 
         randomNumber = rand.nextInt(10) + 1;
         do {
@@ -17,10 +18,13 @@ public class Main {
                 if (guess >= 1 && guess <= 10) {
                     done = true;
                 } else {
-                    System.out.println("Invalid input. You've entered: ");
-                    System.out.println("please re-enter your input. ");
+                    System.out.println("Invalid input. Please enter a number between 1 and 10.");
                 }
-            }
+            } else {
+                trash = in.nextLine();
+                System.out.println("Invalid input. You've entered: " + trash);
+                System.out.println("please re-enter your input. ");
+                }
         } while (!done);
         System.out.printf("The random number was: %d\n", randomNumber);
         if (guess < randomNumber) {
