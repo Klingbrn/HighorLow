@@ -32,7 +32,7 @@ public class HighorLow {
         } else if (guess > randomNumber) {
             System.out.println("Your number was too high.");
         } else {
-            System.out.println("one the money! Your guess was correct.");
+            System.out.println("on the money! Your guess was correct.");
         }
     }
 }
